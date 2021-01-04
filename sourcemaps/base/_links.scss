@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  font-family: $font__body;
+  font-size: rem(14);
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.09px;
+  position: relative;
+  display: inline-block;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $white;
+    outline: 0;
+  }
+} 

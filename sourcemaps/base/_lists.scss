@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+## Lists
+--------------------------------------------------------------*/
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dl {
+  margin-bottom: $small-spacing;
+
+  dt {
+    font-weight: 600;
+    margin-top: $small-spacing;
+  }
+
+  dd {
+    margin: 0;
+  }
+}

@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+# Site Styles
+--------------------------------------------------------------*/
+.screen-reader-text {
+  @include screen-reader-text();
+}
+
+#content[tabindex="-1"]:focus {
+  outline: 0; // Do not show the outline on the skip link target.
+}
+
+@import "header";
+
+@import "front-page";
+
+@import "slick";
+
+@import "fancybox";

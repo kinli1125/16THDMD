@@ -1,0 +1,272 @@
+.paginate {
+	position: relative;
+	padding: rem(49) rem(25) rem(40);
+	text-align: center;
+	background-size: cover;
+	background-position: center;
+
+	* {
+		position: relative;
+		z-index: 1;
+	}
+
+	h1 {
+		font-size: rem(30);
+		line-height: 0.98;
+		letter-spacing: -1.99px;
+	}
+
+	h3 {
+		font-size: rem(15);
+		line-height: 1.6;
+		margin-bottom: rem(34);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('assets/images/build/paginate-overlay.png');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+
+	.page-arrow {
+		padding: rem(12) 0;
+		font-family: $font__heading;
+		font-size: rem(14);
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		display: inline-block;
+		width: 49%;
+	}
+
+	.page-prev {
+		padding-right: rem(24);
+		border-right: 2px solid $white;
+	}
+
+	.page-next {
+		padding-left: rem(24);
+	}
+
+	.paginate__prev-next {
+		margin-bottom: rem(100);
+
+		.inactive {
+
+			span, img {
+				opacity: 0.5;
+			}
+		}
+
+		span {
+			font-size: rem(12);
+			font-family: $font__heading;
+			font-weight: bold;
+			text-transform: uppercase;
+			margin-bottom: rem(10);
+		}
+
+		img {
+			margin: auto;
+		}
+
+		span, img {
+			display: block;
+		}
+	}
+
+	.paginate__number {
+		width: 200%;
+		height: rem(30);
+		position: absolute;
+		left: -110%;
+
+		* {
+			float: right;
+		}
+
+		.next, .prev {
+			display: none;
+		}
+
+		.history-text {
+			display: block;
+			position: absolute;
+			margin-left: 0 !important;
+			left: 0;
+			margin-top: rem(6) !important;
+		}
+
+		.paginate__number-text  {
+			text-transform: uppercase;
+			font-family: $font__heading;
+			color: $white;
+			font-size: rem(12);
+			letter-spacing: -0.8px;
+			line-height: 1.25;
+			font-weight: bold;
+			margin-left: rem(12);
+			margin-top: rem(8);
+		}
+
+		.page-numbers {
+			border-radius: 50%;
+			border: 2px solid $white;
+			background-color: $megenta-soft-3;
+			padding: rem(5);
+			font-size: 0;
+			margin-left: 5%;
+			margin-top: rem(8);
+			position: relative;
+			z-index: 1;
+			box-sizing: border-box;
+
+			&:last-of-type(-n+1) {
+				margin-left: 0;
+			}
+		}
+
+		.current {
+			padding: rem(12.5);
+			margin-top: 0;
+
+			&:after {
+				content: '';
+				border-radius: 50%;
+				background-color: $blue-very-dark-grayish;
+				width: rem(10);
+				height: rem(10);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: -50px;
+				left: -48px;
+				margin: 0 auto;
+				width: rem(112);
+				height: rem(44);
+				background-image: url('assets/images/build/current-page.png');
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+			}
+		}
+
+		.dots {
+			padding: rem(12.5);
+			margin-top: 0;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: rem(15);
+				height: rem(5);
+				background-image: url('assets/images/build/dot-page.svg');
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+			}
+		}
+
+		.paginate__number-border {
+			width: 200%;
+			height: rem(2);
+			background: $white;
+			position: absolute;
+			top: rem(13);
+			right: 100px;
+			z-index: -1;
+		}
+	}
+}
+
+
+@include media( $breakpoint__0768 ) {
+
+	.paginate {
+		padding: rem(81) rem(32) rem(60);
+
+		.paginate__prev-next {
+			margin-bottom: rem(80);
+
+			.page-arrow {
+				padding: rem(25) 0;
+			}
+
+			span, img {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			span {
+				margin-bottom: 0;
+				font-size: rem(14);
+				margin-right: rem(13);
+			}
+
+			.page-prev {
+
+				span {
+					float: right;
+					margin-top: rem(13);
+					margin-left: rem(13);
+				}
+			}
+		}
+
+		.paginate__number {
+			width: 100%;
+			position: relative;
+			left: 0;
+
+			.paginate__number-text {
+				margin-left: rem(20);
+			}
+
+			.paginate__number-border {
+				display: block;
+				width: calc( 100% - 220px );
+			}
+		}
+	}
+}
+
+
+@include media( $breakpoint__1024 ) {
+
+	.paginate {
+		padding: rem(81) rem(82) rem(60);
+	}
+}
+
+
+@include media( $breakpoint__1200 ) {
+
+	.paginate__wrapper {
+		@include outer-container();
+		display: block;
+	}
+
+	.paginate {
+
+		h1 {
+			font-size: rem(35);
+		}
+	}
+}

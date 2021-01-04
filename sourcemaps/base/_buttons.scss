@@ -1,0 +1,68 @@
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+#{$all-buttons} {
+  font-family: $font-stack__montserrat;
+  font-weight: bold;
+  font-size: rem(16);
+  line-height: 1.43;
+  letter-spacing: -( em(0.24) );
+  text-transform: uppercase;
+  color: $white;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: $small-spacing $base-spacing;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  appearance: none;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+
+  .section-footer-button & {
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .wpcf7-form & {
+    font-size: rem(13);
+    border: 0;
+    padding: 0;
+  }
+}
+
+.section-footer-button {
+
+  svg {
+    width: rem(180);
+    height: rem(70);
+
+    rect {
+      stroke: $white;
+      stroke-width: rem(5);
+      fill: none;
+      transition: stroke-dashoffset 0.5s, stroke-dashoffset 0.5s;
+
+      &.left {
+        stroke-dasharray: 60 695;
+        stroke-dashoffset: -435;
+      }
+
+      &.right {
+        stroke-dasharray: 60 695;
+        stroke-dashoffset: -185;
+      }
+    }
+  }
+}

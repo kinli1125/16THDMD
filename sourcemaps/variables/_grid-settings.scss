@@ -1,0 +1,49 @@
+// Neat Overrides
+$em-base: 25px;
+$column: modular-scale(3, 1em, $golden);
+$gutter: modular-scale(1, 1em, $golden);
+$grid-columns: 12;
+$grid-padding: rem( $em-base );
+$max-width: rem(1200);
+$first-break__point: 768px;
+$second-break__point: 1024px;
+$border-box-sizing: true !default;
+
+// Neat Visual Grid
+$visual-grid: false;
+$visual-grid-color: #faf322;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.2;
+
+// Device-width breakpoints
+$pixel-value__0321:  321px; // Samsung Galaxy S/S2/S3 mini, Apple iPhone 3G/4/5
+$pixel-value__0361:  361px; // Samsung Galaxy S3/S4 mini/S5/Note 2, Sony Xperia P/S/Z
+$pixel-value__0376:  376px; // Apple iPhone 6
+$pixel-value__0415:  415px; // Motorola Nexus 6, Apple iPhone 6 Plus
+$pixel-value__0440:  440px;
+$pixel-value__0641:  641px; // Very common device height for mobile devices
+$pixel-value__0769:  767px; // City Breakpoint
+$pixel-value__0961:  960px;
+$pixel-value__1025: 1025px; // Apple iPad Pro, Apple iPad (landscape), Microsoft Surface Pro 3
+$pixel-value__1056: 1056px; //
+$pixel-value__1091: 1091px; // Extra-small laptops
+$pixel-value__1199: 1199px; // Rush Hour Media Custom Desktop
+$pixel-value__1281: 1281px; // Small laptops
+$pixel-value__1367: 1367px; // Screens with a height of 768px and a ratio of 16x9
+$pixel-value__1441: 1441px; // Large laptops (Apple MacBook Pro 15")
+
+$breakpoint__0320: new-breakpoint(max-width $pixel-value__0321 $grid-columns);
+$breakpoint__0375: new-breakpoint(max-width $pixel-value__0361 $grid-columns);
+$breakpoint__0375: new-breakpoint(max-width $pixel-value__0376 $grid-columns);
+$breakpoint__0414: new-breakpoint(max-width $pixel-value__0415 $grid-columns);
+$breakpoint__0439: new-breakpoint(max-width $pixel-value__0440 $grid-columns);
+$breakpoint__0640: new-breakpoint(max-width $pixel-value__0641 $grid-columns);
+$breakpoint__0768: new-breakpoint(max-width $pixel-value__0769 12);
+$breakpoint__0960: new-breakpoint(max-width $pixel-value__0961 12);
+$breakpoint__1024: new-breakpoint(max-width $pixel-value__1025 12);
+$breakpoint__1055: new-breakpoint(max-width $pixel-value__1056 12);
+$breakpoint__1090: new-breakpoint(max-width $pixel-value__1091 12);
+$breakpoint__1200: new-breakpoint(max-width $pixel-value__1199 12);
+$breakpoint__1280: new-breakpoint(max-width $pixel-value__1281 12);
+$breakpoint__1366: new-breakpoint(max-width $pixel-value__1367 12);
+$breakpoint__1440: new-breakpoint(max-width $pixel-value__1441 12);

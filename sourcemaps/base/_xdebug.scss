@@ -1,0 +1,120 @@
+/*--------------------------------------------------------------
+## xdebug (PHP Errors)
+--------------------------------------------------------------*/
+.xdebug-error {
+  $dark-primary-color: #455A64;
+  $default-primary-color: #607D8B;
+  $light-primary-color: #CFD8DC;
+  $text-primary-color: #FFFFFF;
+  $accent-color: #009688;
+  $primary-text-color: #212121;
+  $secondary-text-color: #727272;
+  $divider-color: #B6B6B6;
+  $warning-color: #C62828;
+  $box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.33);
+  position: relative;
+  width: 95%;
+  margin: 1em auto;
+  border-collapse: collapse;
+  border: none;
+  color: $primary-text-color;
+  font-size: 1rem;
+  transition: all 300ms ease-out;
+  font-family: 'Open Sans', 'Helvetica', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  box-shadow: $box-shadow;
+
+  caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  tr:first-of-type {
+    // Warning header.
+    th {
+      background-color: $dark-primary-color !important;
+      color: $text-primary-color;
+      padding: 1.33em 2em;
+    }
+  }
+
+  tr:nth-of-type(2) {
+    // "Call Stack" header.
+    th {
+      background-color: $default-primary-color !important;
+      color: $text-primary-color;
+      font-weight: 400;
+      padding: 0.66em 0.33em;
+    }
+  }
+
+  tr:nth-of-type(3) {
+    // Columns header
+    th {
+      padding: 0.66em;
+      // box-shadow: inset 0px 8px 4px -6px rgba(0, 0, 0, 0.66);
+      background-color: $light-primary-color !important;
+      color: $primary-text-color;
+    }
+  }
+
+  tr:nth-of-type(2) th,
+  tr:nth-of-type(3) th {
+    text-align: center;
+  }
+
+  td {
+    background-color: #fff;
+    color: black;
+    padding: .15em;
+
+    font {
+      color: $accent-color !important;
+    }
+
+    a {
+      color: $warning-color !important;
+      padding-bottom: .33em;
+    }
+  }
+
+  tr:nth-of-type(1n+4) {
+    // Call stack items
+    &:hover {
+      td {
+        background-color: $light-primary-color !important;
+      }
+    }
+
+    td {
+      padding: 0.76em;
+      font-size: 0.8333em;
+    }
+
+    td:nth-of-type(4),
+    td:nth-of-type(5) {
+      // function
+      font-family: monospace;
+      font-weight: normal;
+    }
+  }
+
+  span {
+    background-color: $accent-color !important;
+    color: $text-primary-color !important;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    display: block;
+    box-shadow: $box-shadow;
+    padding: .22em;
+  }
+}

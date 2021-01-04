@@ -1,0 +1,5 @@
+.grid-container {
+	padding-left: $grid-padding;
+	padding-right: $grid-padding;
+	@include outer-container;
+}

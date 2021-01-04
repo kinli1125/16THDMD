@@ -1,0 +1,52 @@
+/*!
+Theme Name: Rush Hour Media
+Theme URI: http://underscores.me/
+Author: Rush Hour Media
+Author URI: http://rushhourmedia.hk
+Description: A base theme for Rush Hour Media\'s projects.
+Version: 2.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rushhour
+Tags:
+
+Rush Hour Media is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+# SASS Mixins and Variables
+--------------------------------------------------------------*/
+// Mixins
+@import "bourbon"; // bourbon must load before neat-helpers
+@import "neat-helpers"; // neat-helpers must load before neat & grid-settings
+@import "mixins/mixins"; // Theme mixins
+
+// Site-wide Variables
+@import "variables/variables";
+
+// Grid System
+@import "neat";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "vendor/normalize";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/modules";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";

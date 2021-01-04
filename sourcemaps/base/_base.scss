@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# Base Styles (Opinionated Reset)
+--------------------------------------------------------------*/
+html {
+  font-size: $em-base; // Set the font size in pixels. Used to calculate rem units. $em-base is defined in '_grid-settings.scss'.
+  font-family: $sansPro;
+  color: $city-dark;
+  -ms-text-size-adjust: 100%; // Normalize
+  -webkit-text-size-adjust: 100%; // Normalize
+}
+
+body {
+  background: $color__background-header; // Fallback for when there is no custom background color defined.
+  margin: 0; // Normalize
+
+  * {
+    outline: none !important;
+  }
+
+  &.locked {
+    overflow-y: hidden;
+  }
+}
+
+hr {
+  background-color: $color__background-hr;
+  box-sizing: content-box; // Normalize
+  overflow: visible; // Normalize
+  border: 0 0 $base-border;
+  height: 1px;
+  margin: $base-spacing 0;
+}
+
+embed,
+iframe,
+object {
+max-width: 100%; // Make sure embeds and iframes fit their containers.
+}
+
+img,
+picture {
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h5 {
+  margin: 0;
+}
+
+@import "typography";
+
+@import "links";
+
+@import "buttons";
+
+@import "lists";
+
+@import "tables";
+
+@import "forms";
+
+@import "xdebug";
